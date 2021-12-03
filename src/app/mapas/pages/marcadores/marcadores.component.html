@@ -1,0 +1,16 @@
+<ul class="list-group">
+  <li class="list-group-item list-group-item-info" (click)="agregarMarcador()">+Agregar</li>
+  <li
+    class="list-group-item"
+    (click)="buscarMarca(i)"
+    (dblclick)="borrarMarcador(i)"
+    *ngFor="let item of marks; index as i"
+    [ngStyle]="{
+      'background-color': item.color
+    }"
+  >
+    Marca{{ i }}
+  </li>
+</ul>
+
+<div #mapa class="mapa-container"></div>
